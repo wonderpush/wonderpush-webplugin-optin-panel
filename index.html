@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://cdn.by.wonderpush.com/sdk/1.1/wonderpush-loader.min.js"
+      async
+    ></script>
+    <script>
+      window.WonderPush = window.WonderPush || [];
+      WonderPush.push([
+        "init",
+        {
+          webKey:
+            "79c3fc61e1fbde98dfcc8ed75dece1214a79b316896de7d6494b7909b99f533b",
+          plugins: {
+            "https://wonderpushdev.netlify.app/src/optin-panel.js": {
+              // triggers: {
+                
+              // },
+              // backgroundColor: "#FFFFFF",
+              // negativeSnooze : false
+            },
+          },
+        },
+      ]);
+      window.addEventListener("click", function () {
+        WonderPush.Plugins.get("optin-panel").showDialog();
+      });
+    </script>
+    <h1>Test wonderpush</h1>
+  </body>
+</html>
