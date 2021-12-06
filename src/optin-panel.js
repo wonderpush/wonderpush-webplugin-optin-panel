@@ -45,7 +45,7 @@
  * @memberof external:WonderPushPluginSDK
  * @see {@link https://wonderpush.github.io/wonderpush-javascript-sdk/latest/WonderPushPluginSDK.html#.TriggersConfig|WonderPush JavaScript Plugin SDK triggers configuration reference}
  */
- WonderPush.registerPlugin("optin-panel", function (WonderPushSDK, options) {
+WonderPush.registerPlugin("optin-panel", function (WonderPushSDK, options) {
   // Do not show anything on unsupported browsers.
   if (!WonderPushSDK.isNativePushNotificationSupported()) {
     return {
@@ -151,7 +151,7 @@
 
   var _lockedNotificationTitle = options.lockedNotificationTitle || _("Your notifications are blocked?");
   var _lockedNotificationSubtitle =  options.lockedNotificationSubtitle || _("From your navigation bar click on:");
-  var _lockedNotificationImg = options.lockedNotificationImg !== undefined ? options.lockedNotificationImg : "https://www.wonderpush.loc/dist/barNavigationChrome.png";
+  var _lockedNotificationImg = options.lockedNotificationImg !== undefined ? options.lockedNotificationImg : "https://wonderpushdev.netlify.app/src/barNavigationChrome.png";
 
   var _style = options.style;
   var _icon = options.icon !== undefined ? options.icon : WonderPushSDK.getNotificationIcon();
@@ -261,7 +261,7 @@
     if (options.backgroundColor) {
       boxDiv.style.backgroundColor = options.backgroundColor;
       boxDiv.style.backgroundImage = "none";
-      boxDiv.style.borderColor = options.backgroundColor;
+      // boxDiv.style.borderColor = options.backgroundColor;
     }
     boxDiv.style.color = options.textColor || "black";
     if (_style) {
@@ -288,7 +288,7 @@
     fakeText2.className = cssPrefix + "fakeContainer-fakeNativeModal-text2";
     fakeText2.textContent = _notificationText;
     var fakeText2Img = document.createElement("img");
-    fakeText2Img.src = "https://www.wonderpush.loc/dist/bell.svg";
+    fakeText2Img.src = "https://wonderpushdev.netlify.app/src/bell.svg";
     fakeText2.appendChild(fakeText2Img);
 
     var fakeHardButtons = document.createElement("div");
@@ -336,7 +336,7 @@
     closeButtonLocked.addEventListener("click", function (event) {
       event.preventDefault();
       event.stopPropagation();
-      this.parentElement.style.display = "none";
+      lockedNotificationsContainer.style.display = "none";
     });
     
     lockedNotificationsTextUpper.className = cssPrefix + "lockedContainer-textUpper";
@@ -472,7 +472,7 @@
       if (btnConfig[btn].backgroundColor) {
         fakeHardButton.style.backgroundColor = btnConfig[btn].backgroundColor;
         fakeHardButton.style.backgroundImage = "none";
-        fakeHardButton.style.borderColor = btnConfig[btn].backgroundColor;
+        // fakeHardButton.style.borderColor = btnConfig[btn].backgroundColor;
       }
       if (btnConfig[btn].color) {
         fakeHardButton.style.color = btnConfig[btn].color;

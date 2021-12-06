@@ -1,344 +1,345 @@
 .wp-optin-panel-fakeContainer {
-  width: calc(100% - 34px);
-  padding: 10px 0px 0 18px;
-  &-fakeNativeModal{
-    width: 100%;
-    background-color: white;
-    // border: 1px solid #d6d6d6;
-    border-radius: 5px;
-    // box-shadow: 0 1px 5px rgb(0, 0, 0 / 8%);
-    &-text1 {
-      font-size: 16px;
-      display: block;
-      margin: 0px 0px 8px 0px;
-    }
-    &-text2 {
-      font-size: 13px;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      align-items: center;
-      margin-bottom: 18px;
-      img{
-        width: 16px;
-        margin: 0px 7px 0px 2px;
-      }
-    }
-    &-hardButtons{
-      display: flex;
-      justify-content: flex-end;
       width: 100%;
-    }
-    &-positiveButton{
-      line-height: 1em;
-      max-height: 28px !important;
-      width: 30%;
-      text-align: center;
-      border: 1px solid #d6d6d6; 
-      font-size: 12px;
-      font-weight: 500;
-      color: #2873fb;
-      padding: 9px 0px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-left: 5px;
+      &-fakeNativeModal{
+        width: 100%;
+        background-color: white;
+        // border-radius: 5px;
+        &-text1 {
+          font-size: 16px;
+          display: block;
+          padding-top: 10px;
+          margin: 0px 0 8px 18px;
+        }
+        &-text2 {
+          font-size: 13px;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+          margin: 10px 0 18px 18px;
+          img{
+            width: 16px;
+            margin: 0px 7px 0px 2px;
+          }
+        }
+        &-hardButtons{
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          padding-bottom: 15px;
+        }
+        &-positiveButton{
+          line-height: 1em;
+          max-height: 28px !important;
+          width: 30%;
+          text-align: center;
+          border: 1px solid #d6d6d6; 
+          font-size: 12px;
+          font-weight: 500;
+          color: #2873fb;
+          padding: 9px 0px;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-left: 5px;
+          margin-right: 12px;
 
-    }
-    &-negativeButton{
-      line-height: 1em;
-      max-height: 28px !important;
-      width: 30%;
-      text-align: center;
-      border: 1px solid #d6d6d6; 
-      font-size: 12px;
-      font-weight: 500;
-      color: #2873fb;
-      padding: 9px 0px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-left: 5px;
+        }
+        &-negativeButton{
+          line-height: 1em;
+          max-height: 28px !important;
+          width: 30%;
+          text-align: center;
+          border: 1px solid #d6d6d6; 
+          font-size: 12px;
+          font-weight: 500;
+          color: #2873fb;
+          padding: 9px 0px;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-left: 5px;
+        }
+      }
+ }
+
+ .wp-optin-panel-lockedContainer {
+  display: none;
+  @media only screen and (max-width: 600px) {
+    width: 0px;
+  }
+  z-index: 10000;
+  max-width: 400px;
+  box-sizing: border-box;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  transform: translateX(0);
+  padding: 0px;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 0 20px #888;
+  color: #1d1d1b;
+  font-family: 'Roboto', sans-serif;
+  
+  &-chrome {
+    right: 238px;
+  }
+  &-left{
+    padding: 15px;
+  }
+  &-right{
+    width: 100px;
+    height: auto;
+    background-color: #00f;
+    &-arrow{
+      display: block;
+      margin: 30px auto;
+      width: 25px;
+      height: 25px;
+      border-top: 5px solid #fff;
+      border-left: 5px solid #fff;
+      transform: rotate(45deg);
+      &::after{
+        content: "";
+        display: block;
+        width: 5px;
+        height: 45px;
+        background-color: #fff;
+        transform: rotate(-45deg) translate(15px, 4px);
+        left: 0;
+        top: 0;
     }
   }
-}
-
-.wp-optin-panel-lockedContainer {
-display: none;
-@media only screen and (max-width: 600px) {
-width: 0px;
-}
-z-index: 10000;
-max-width: 400px;
-box-sizing: border-box;
-background-color: white;
-position: fixed;
-top: 0;
-transform: translateX(0);
-padding: 0px;
-border: 1px solid #dfdfdf;
-box-shadow: 0 0 20px #888;
-color: #1d1d1b;
-font-family: 'Roboto', sans-serif;
-
-&-chrome {
-right: 238px;
-}
-&-left{
-padding: 15px;
-}
-&-right{
-width: 100px;
-height: auto;
-background-color: #00f;
-&-arrow{
-  display: block;
-  margin: 30px auto;
-  width: 25px;
-  height: 25px;
-  border-top: 5px solid #fff;
-  border-left: 5px solid #fff;
-  transform: rotate(45deg);
-  &::after{
-    content: "";
-    display: block;
-    width: 5px;
-    height: 45px;
-    background-color: #fff;
-    transform: rotate(-45deg) translate(15px, 4px);
-    left: 0;
-    top: 0;
-}
-}
-}
-&-textUpper{
-font-size: 14px;
-color: black;
-margin-bottom: 10px;
-}
-&-textLower{
-font-size: 14px;
-color: black;
-margin-bottom: 10px;
-}
-&-img{
-border: 2px solid black;
-width: 100%;
-object-fit: cover;
-}
-&-close{
-position: absolute;
-top: 2.5px;
-left: 2.5px;
-width: 8px;
-height: 8px;
-text-decoration: none;
-background-image: url('close.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 50% 50%;
-}
-}
-
-
-.wp-optin-panel-android {
-&-container{
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-background: rgba(0, 0, 0, 0.5);
-z-index: 10000;
-&-close{
-  position: absolute;
-  top: 4.5px;
-  right: 11px;
-  width: 8px;
-  height: 8px;
-  text-decoration: none;
-  background-image: url('close.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
-}
-&-divText{
-  padding: 10px;
-  background-color: #fff;
-  color: black;
-  max-height: 120px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  &-title{
-    font-size: 18px;
+  }
+  &-textUpper{
+    font-size: 14px;
+    color: black;
     margin-bottom: 10px;
   }
-  &-text1{
-    color: blue;
-    margin-bottom: 5px;
+  &-textLower{
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
   }
-  &-text2{
-  }
-}
-&-divImg{
-  max-height: 120px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 100%;
-}
-&-bottom{
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 120px;
+  &-img{
+  border: 2px solid black;
   width: 100%;
-  &-text{
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    margin-right: 10px;
+  object-fit: cover;
   }
-  &-arrow{
-    color: blue;
-    margin-left: 10px;
-    margin-top: 2px;
-    width: 4px;
-    height: 50px;
-    position: relative;
-    background-color: blue;
-    &::before{
-      content: '';
+  &-close{
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 8px;
+    height: 8px;
+    text-decoration: none;
+    background-image: url('close.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+ }
+
+
+ .wp-optin-panel-android {
+   &-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    &-close{
       position: absolute;
-      left: -7px;
-      bottom: 0px;
-      width: 15px;
-      height: 15px;
-      border-top: solid 4px blue;
-      border-right: solid 4px blue;
-      -webkit-transform: rotate(135deg);
-      transform: rotate(135deg);
+      top: 4.5px;
+      right: 11px;
+      width: 8px;
+      height: 8px;
+      text-decoration: none;
+      background-image: url('close.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+  
     }
-  }
-}
-}
-}
+    &-divText{
+      padding: 10px;
+      background-color: #fff;
+      color: black;
+      max-height: 120px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      &-title{
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      &-text1{
+        color: blue;
+        margin-bottom: 5px;
+      }
+      &-text2{
+      }
+    }
+    &-divImg{
+      max-height: 120px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      height: 100%;
+    }
+    &-bottom{
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 120px;
+      width: 100%;
+      &-text{
+        font-size: 24px;
+        font-weight: bold;
+        color: blue;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        margin-right: 10px;
+      }
+      &-arrow{
+        color: blue;
+        margin-left: 10px;
+        margin-top: 2px;
+        width: 4px;
+        height: 50px;
+        position: relative;
+        background-color: blue;
+        &::before{
+          content: '';
+          position: absolute;
+          left: -7px;
+          bottom: 0px;
+          width: 15px;
+          height: 15px;
+          border-top: solid 4px blue;
+          border-right: solid 4px blue;
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+      }
+    }
+   }
+ }
 
 .wp-optin-panel-container {
-z-index: 10000;
-width: 324px;
-max-width: 100%;
-box-sizing: border-box;
-background-image: linear-gradient(to bottom,#eae9ea,#eeedee);
-position: fixed;
-top: 0;
-left: 300px;
-transform: translateX(-50%);
-padding: 0px;
-border: 1px solid #dfdfdf;
-box-shadow: 0 0 20px #888;
-color: #1d1d1b;
-font-family: 'Roboto', sans-serif;
+    z-index: 10000;
+    width: 324px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom,#eae9ea,#eeedee);
+    position: fixed;
+    top: 0;
+    left: 300px;
+    transform: translateX(-50%);
+    padding: 0px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0 20px #888;
+    color: #1d1d1b;
+    font-family: 'Roboto', sans-serif;
 
 
 
-
-&_chrome {
-}
-&_firefox{
-    width: 410px;
-    left: 527px;
-}
-&_edge{
-    left: 342px;
-    width: 314px;
-}
-}
-
-.wp-optin-panel-container .wp-optin-panel-body {
-display: flex;
-flex-direction: column-reverse;
-}
-
-.wp-optin-panel-container .wp-optin-panel-icon {
-width: 100%;
-max-height: 300px;
-object-fit: cover;
-}
-
-.wp-optin-panel-container .wp-optin-panel-text {
-display: flex;
-flex-direction: column;
-flex-grow: 1;
-padding: 25px 0px 10px 18px;
-}
-
-.wp-optin-panel-container .wp-optin-panel-text .wp-optin-panel-title {
-font: bold 16px arial;
-margin-bottom: 15px;
-}
-
-.wp-optin-panel-container .wp-optin-panel-text .wp-optin-panel-message {
-font: 12px arial;
-margin: 0 0 20px 0;
-}
-
-.wp-optin-panel-container .wp-optin-panel-buttons {
-display: flex;
-flex-direction: row;
-margin-top: 1em;
-}
-
-.wp-optin-panel-container .wp-optin-panel-powered-by {
-flex-grow: 1;
-align-self: flex-end;
-font: 10px arial;
-color: #333;
-opacity: 0.8;
-background-position: bottom right;
-background-repeat: no-repeat;
-text-decoration: none;
-margin-right: .5em;
-}
-
-.wp-optin-panel-container .wp-optin-panel-button {
-flex-grow: 1;
-border-radius: 4px;
-border: 1px solid #d3d3d3;
-background: #fff;
-text-decoration: none;
-font: 15px arial;
-color: #333;
-text-align: center;
-display: flex;
-min-width: 5em;
-padding: .25em .5em;
-}
-
-.wp-optin-panel-container .wp-optin-panel-button label {
-cursor: inherit;
-margin: auto;
-}
-
-.wp-optin-panel-container .wp-optin-panel-button.wp-optin-panel-positiveButton {
-border-color: #46a4f3;
-color: white;
-background-image: linear-gradient(to bottom, #62b3f4, #0486f6);
-margin-left: .5em;
-}
-
-.wp-optin-panel-container .wp-optin-panel-close {
-position: absolute;
-top: 4.5px;
-right: 11px;
-width: 8px;
-height: 8px;
-text-decoration: none;
-background-image: url('close.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 50% 50%;
-}
+ 
+    &_chrome {
+    }
+    &_firefox{
+        width: 410px;
+        left: 527px;
+    }
+    &_edge{
+        left: 342px;
+        width: 314px;
+    }
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-icon {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 25px 0px 10px 18px;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-text .wp-optin-panel-title {
+    font: bold 16px arial;
+    margin-bottom: 15px;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-text .wp-optin-panel-message {
+    font: 12px arial;
+    margin: 0 0 20px 0;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-powered-by {
+    flex-grow: 1;
+    align-self: flex-end;
+    font: 10px arial;
+    color: #333;
+    opacity: 0.8;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    margin-right: .5em;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-button {
+    flex-grow: 1;
+    border-radius: 4px;
+    border: 1px solid #d3d3d3;
+    background: #fff;
+    text-decoration: none;
+    font: 15px arial;
+    color: #333;
+    text-align: center;
+    display: flex;
+    min-width: 5em;
+    padding: .25em .5em;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-button label {
+    cursor: inherit;
+    margin: auto;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-button.wp-optin-panel-positiveButton {
+    border-color: #46a4f3;
+    color: white;
+    background-image: linear-gradient(to bottom, #62b3f4, #0486f6);
+    margin-left: .5em;
+  }
+  
+  .wp-optin-panel-container .wp-optin-panel-close {
+    position: absolute;
+    top: 4.5px;
+    right: 11px;
+    width: 8px;
+    height: 8px;
+    text-decoration: none;
+    background-image: url('close.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  
